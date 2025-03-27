@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetFindr - Film Locations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SetFindr</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="locations.html" class="active">Locations</a></li>
+                <li><a href="gear.html">Gear</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <button class="btn-secondary">Sign In</button>
+            <button class="btn-primary">Sign Up</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero location-hero">
+            <div class="hero-content">
+                <h2>Find the Perfect Film Location</h2>
+                <p>Discover unique and stunning locations for your next production</p>
+                
+                <div class="search-container">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for locations...">
+                    </div>
+                    
+                    <div class="location-selector">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="City, State or Zip">
+                    </div>
+                    
+                    <div class="date-picker">
+                        <i class="far fa-calendar-alt"></i>
+                        <input type="text" placeholder="Start Date">
+                        <span>to</span>
+                        <input type="text" placeholder="End Date">
+                    </div>
+                    
+                    <button class="search-btn">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <h4>Location Type</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="type" value="urban">
+                                <span>Urban</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="type" value="rural">
+                                <span>Rural</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="type" value="beach">
+                                <span>Beach</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="type" value="mansion">
+                                <span>Mansion</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="type" value="office">
+                                <span>Office</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <div class="price-slider">
+                            <input type="range" min="100" max="5000" value="1000" class="slider" id="priceRange">
+                            <div class="price-values">
+                                <span>$100</span>
+                                <span id="priceValue">$1000</span>
+                                <span>$5000+</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Amenities</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="amenities" value="parking">
+                                <span>Parking</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="amenities" value="power">
+                                <span>Power Access</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="amenities" value="bathroom">
+                                <span>Bathroom</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="amenities" value="kitchen">
+                                <span>Kitchen</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="amenities" value="wifi">
+                                <span>WiFi</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Size</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="size" value="small">
+                                <span>Small (< 1000 sq ft)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="size" value="medium">
+                                <span>Medium (1000-3000 sq ft)</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="size" value="large">
+                                <span>Large (> 3000 sq ft)</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary apply-filters">Apply Filters</button>
+                </div>
+                
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i> Grid</button>
+                    <button class="view-btn" data-view="map"><i class="fas fa-map-marked-alt"></i> Map</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="locations-grid">
+            <div class="container">
+                <h3>Popular Film Locations</h3>
+                <div class="location-results">
+                    <div class="location-card">
+                        <div class="location-img" style="background-image: url('https://images.unsplash.com/photo-1518156677180-95a2893f3499?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="location-badge">Featured</div>
+                        <div class="location-info">
+                            <h4>Modern Industrial Loft</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Brooklyn, NY</p>
+                            <p class="price">$1,200/day</p>
+                            <div class="location-meta">
+                                <span><i class="fas fa-ruler-combined"></i> 2,500 sq ft</span>
+                                <span><i class="fas fa-parking"></i> Parking</span>
+                                <span><i class="fas fa-wifi"></i> WiFi</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(42 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card">
+                        <div class="location-img" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="location-info">
+                            <h4>Oceanfront Beach House</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Malibu, CA</p>
+                            <p class="price">$3,500/day</p>
+                            <div class="location-meta">
+                                <span><i class="fas fa-ruler-combined"></i> 4,200 sq ft</span>
+                                <span><i class="fas fa-parking"></i> Parking</span>
+                                <span><i class="fas fa-utensils"></i> Kitchen</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(67 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card">
+                        <div class="location-img" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="location-info">
+                            <h4>Historic Victorian Mansion</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
+                            <p class="price">$2,800/day</p>
+                            <div class="location-meta">
+                                <span><i class="fas fa-ruler-combined"></i> 6,800 sq ft</span>
+                                <span><i class="fas fa-parking"></i> Parking</span>
+                                <span><i class="fas fa-toilet"></i> 5 Bathrooms</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(31 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card">
+                        <div class="location-img" style="background-image: url('https://images.unsplash.com/photo-1464146072230-91cabc968266?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="location-info">
+                            <h4>Rustic Countryside Farm</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Austin, TX</p>
+                            <p class="price">$1,500/day</p>
+                            <div class="location-meta">
+                                <span><i class="fas fa-ruler-combined"></i> 12 acres</span>
+                                <span><i class="fas fa-parking"></i> Parking</span>
+                                <span><i class="fas fa-warehouse"></i> Barn</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(24 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card">
+                        <div class="location-img" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="location-info">
+                            <h4>Modern Corporate Office</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Chicago, IL</p>
+                            <p class="price">$1,800/day</p>
+                            <div class="location-meta">
+                                <span><i class="fas fa-ruler-combined"></i> 3,200 sq ft</span>
+                                <span><i class="fas fa-parking"></i> Parking</span>
+                                <span><i class="fas fa-wifi"></i> WiFi</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(19 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card">
+                        <div class="location-img" style="background-image: url('https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="location-info">
+                            <h4>Industrial Warehouse</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Detroit, MI</p>
+                            <p class="price">$950/day</p>
+                            <div class="location-meta">
+                                <span><i class="fas fa-ruler-combined"></i> 8,500 sq ft</span>
+                                <span><i class="fas fa-parking"></i> Parking</span>
+                                <span><i class="fas fa-plug"></i> Power</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span>(15 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-view" style="display: none;">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Map View Coming Soon</p>
+                        <p class="map-note">Our interactive map feature is currently under development</p>
+                    </div>
+                </div>
+                
+                <div class="pagination">
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <button class="pagination-btn">4</button>
+                    <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SetFindr</h3>
+                <p>The ultimate platform for filmmakers to discover and rent film locations and equipment.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="locations.html">Film Locations</a></li>
+                    <li><a href="gear.html">Film Gear</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Film Street, Hollywood, CA 90028</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@setfindr.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for the latest updates.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SetFindr. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="animations.js"></script>
+</body>
+</html>

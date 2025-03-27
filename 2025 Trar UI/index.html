@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetFindr - Find Film Locations and Gear</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SetFindr</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="gear.html">Gear</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <button class="btn-secondary">Sign In</button>
+            <button class="btn-primary">Sign Up</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Find the Perfect Film Location or Gear</h2>
+                <p>The ultimate platform for filmmakers to discover and rent film locations and equipment</p>
+                
+                <div class="search-container">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for locations or gear...">
+                    </div>
+                    
+                    <div class="location-selector">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="Location">
+                    </div>
+                    
+                    <div class="date-picker">
+                        <i class="far fa-calendar-alt"></i>
+                        <input type="text" placeholder="Start Date">
+                        <span>to</span>
+                        <input type="text" placeholder="End Date">
+                    </div>
+                    
+                    <button class="search-btn">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="all">All Categories</button>
+                    <button class="tab-btn" data-tab="locations">Film Locations</button>
+                    <button class="tab-btn" data-tab="gear">Film Gear</button>
+                </div>
+                
+                <div class="tab-content active" id="all">
+                    <h3>Most Rented Categories</h3>
+                    <div class="category-grid">
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1518156677180-95a2893f3499?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Urban Lofts</h4>
+                            <p>Modern urban spaces with industrial aesthetics</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Beach Locations</h4>
+                            <p>Stunning coastal settings for your production</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1533702165324-99b0d0b9d9c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Professional Cameras</h4>
+                            <p>High-end cameras for professional filmmaking</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Lighting Equipment</h4>
+                            <p>Professional lighting for any production needs</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Historic Mansions</h4>
+                            <p>Elegant historic properties with character</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1520390138845-fd2d229dd553?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Sound Equipment</h4>
+                            <p>Professional audio gear for perfect sound</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="locations">
+                    <h3>Most Popular Film Locations</h3>
+                    <div class="category-grid">
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1518156677180-95a2893f3499?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Urban Lofts</h4>
+                            <p>Modern urban spaces with industrial aesthetics</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Beach Locations</h4>
+                            <p>Stunning coastal settings for your production</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Historic Mansions</h4>
+                            <p>Elegant historic properties with character</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1464146072230-91cabc968266?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Rural Farms</h4>
+                            <p>Picturesque countryside settings</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Modern Offices</h4>
+                            <p>Contemporary office spaces for business scenes</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Warehouses</h4>
+                            <p>Spacious industrial settings for large productions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="gear">
+                    <h3>Most Popular Film Gear</h3>
+                    <div class="category-grid">
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1533702165324-99b0d0b9d9c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Professional Cameras</h4>
+                            <p>High-end cameras for professional filmmaking</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Lighting Equipment</h4>
+                            <p>Professional lighting for any production needs</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1520390138845-fd2d229dd553?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Sound Equipment</h4>
+                            <p>Professional audio gear for perfect sound</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1551184451-76b792a6e5f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Camera Stabilizers</h4>
+                            <p>Gimbals and stabilizers for smooth footage</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1574717024453-e569bd3f6b9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Drones</h4>
+                            <p>Professional drones for aerial cinematography</p>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1533158326339-7f3cf2404354?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                            <h4>Lenses</h4>
+                            <p>Premium lenses for various shooting conditions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured">
+            <h3>Featured Listings</h3>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="featured-img" style="background-image: url('https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="featured-info">
+                        <h4>Luxury Beachfront Villa</h4>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Malibu, CA</p>
+                        <p class="price">$2,500/day</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(42 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-img" style="background-image: url('https://images.unsplash.com/photo-1533702165324-99b0d0b9d9c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="featured-info">
+                        <h4>RED KOMODO 6K Camera</h4>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
+                        <p class="price">$350/day</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(78 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-img" style="background-image: url('https://images.unsplash.com/photo-1518156677180-95a2893f3499?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="featured-info">
+                        <h4>Industrial Loft Studio</h4>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Brooklyn, NY</p>
+                        <p class="price">$800/day</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(35 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SetFindr</h3>
+                <p>The ultimate platform for filmmakers to discover and rent film locations and equipment.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Film Locations</a></li>
+                    <li><a href="#">Film Gear</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Film Street, Hollywood, CA 90028</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@setfindr.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for the latest updates.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SetFindr. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="animations.js"></script>
+</body>
+</html>

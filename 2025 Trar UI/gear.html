@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetFindr - Film Gear</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SetFindr</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="gear.html" class="active">Gear</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <button class="btn-secondary">Sign In</button>
+            <button class="btn-primary">Sign Up</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero gear-hero">
+            <div class="hero-content">
+                <h2>Find Professional Film Gear</h2>
+                <p>Rent high-quality equipment for your next production</p>
+                
+                <div class="search-container">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for gear...">
+                    </div>
+                    
+                    <div class="location-selector">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="City, State or Zip">
+                    </div>
+                    
+                    <div class="date-picker">
+                        <i class="far fa-calendar-alt"></i>
+                        <input type="text" placeholder="Start Date">
+                        <span>to</span>
+                        <input type="text" placeholder="End Date">
+                    </div>
+                    
+                    <button class="search-btn">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <h4>Gear Type</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="type" value="cameras">
+                                <span>Cameras</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="type" value="lenses">
+                                <span>Lenses</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="type" value="lighting">
+                                <span>Lighting</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="type" value="audio">
+                                <span>Audio</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="type" value="stabilizers">
+                                <span>Stabilizers</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <div class="price-slider">
+                            <input type="range" min="50" max="2000" value="500" class="slider" id="priceRange">
+                            <div class="price-values">
+                                <span>$50</span>
+                                <span id="priceValue">$500</span>
+                                <span>$2000+</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Brand</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="brand" value="sony">
+                                <span>Sony</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="brand" value="canon">
+                                <span>Canon</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="brand" value="red">
+                                <span>RED</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="brand" value="blackmagic">
+                                <span>Blackmagic</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="brand" value="arri">
+                                <span>ARRI</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Condition</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="condition" value="new">
+                                <span>New</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="condition" value="excellent">
+                                <span>Excellent</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="condition" value="good">
+                                <span>Good</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary apply-filters">Apply Filters</button>
+                </div>
+                
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i> Grid</button>
+                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i> List</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="gear-grid">
+            <div class="container">
+                <h3>Popular Film Gear</h3>
+                <div class="gear-results">
+                    <div class="gear-card">
+                        <div class="gear-img" style="background-image: url('https://images.unsplash.com/photo-1533702165324-99b0d0b9d9c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="gear-badge">Featured</div>
+                        <div class="gear-info">
+                            <h4>RED KOMODO 6K Camera</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
+                            <p class="price">$350/day</p>
+                            <div class="gear-meta">
+                                <span><i class="fas fa-microchip"></i> 6K Resolution</span>
+                                <span><i class="fas fa-memory"></i> 120fps</span>
+                                <span><i class="fas fa-battery-full"></i> 2 Batteries</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(78 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gear-card">
+                        <div class="gear-img" style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="gear-info">
+                            <h4>ARRI SkyPanel S60-C</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+                            <p class="price">$180/day</p>
+                            <div class="gear-meta">
+                                <span><i class="fas fa-lightbulb"></i> LED Panel</span>
+                                <span><i class="fas fa-palette"></i> RGB+W</span>
+                                <span><i class="fas fa-bolt"></i> 420W</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(45 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gear-card">
+                        <div class="gear-img" style="background-image: url('https://images.unsplash.com/photo-1520390138845-fd2229dd553?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="gear-info">
+                            <h4>Sennheiser MKH 416 Shotgun Mic</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Atlanta, GA</p>
+                            <p class="price">$65/day</p>
+                            <div class="gear-meta">
+                                <span><i class="fas fa-microphone"></i> Shotgun</span>
+                                <span><i class="fas fa-volume-up"></i> Super-cardioid</span>
+                                <span><i class="fas fa-plug"></i> XLR</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(92 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gear-card">
+                        <div class="gear-img" style="background-image: url('https://images.unsplash.com/photo-1551184451-76b792a6e5f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="gear-info">
+                            <h4>DJI Ronin-S Gimbal Stabilizer</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Chicago, IL</p>
+                            <p class="price">$75/day</p>
+                            <div class="gear-meta">
+                                <span><i class="fas fa-weight-hanging"></i> 8 lbs Capacity</span>
+                                <span><i class="fas fa-battery-full"></i> 12hr Battery</span>
+                                <span><i class="fas fa-mobile-alt"></i> App Control</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(37 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gear-card">
+                        <div class="gear-img" style="background-image: url('https://images.unsplash.com/photo-1574717024453-e569bd3f6b9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="gear-info">
+                            <h4>DJI Mavic 3 Pro Drone</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Miami, FL</p>
+                            <p class="price">$150/day</p>
+                            <div class="gear-meta">
+                                <span><i class="fas fa-camera"></i> 4/3 CMOS</span>
+                                <span><i class="fas fa-film"></i> 5.1K Video</span>
+                                <span><i class="fas fa-clock"></i> 46min Flight</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(53 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gear-card">
+                        <div class="gear-img" style="background-image: url('https://images.unsplash.com/photo-1533158326339-7f3cf2404354?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="gear-info">
+                            <h4>Canon EF 70-200mm f/2.8L IS III</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Seattle, WA</p>
+                            <p class="price">$85/day</p>
+                            <div class="gear-meta">
+                                <span><i class="fas fa-compress-arrows-alt"></i> 70-200mm</span>
+                                <span><i class="fas fa-dot-circle"></i> f/2.8</span>
+                                <span><i class="fas fa-hand-rock"></i> Image Stabilization</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(64 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="list-view" style="display: none;">
+                    <div class="gear-list-item">
+                        <div class="gear-list-img" style="background-image: url('https://images.unsplash.com/photo-1533702165324-99b0d0b9d9c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="gear-list-info">
+                            <h4>RED KOMODO 6K Camera</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
+                            <div class="gear-meta">
+                                <span><i class="fas fa-microchip"></i> 6K Resolution</span>
+                                <span><i class="fas fa-memory"></i> 120fps</span>
+                                <span><i class="fas fa-battery-full"></i> 2 Batteries</span>
+                            </div>
+                            <div class="gear-list-bottom">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(78 reviews)</span>
+                                </div>
+                                <p class="price">$350/day</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More list items would go here -->
+                </div>
+                
+                <div class="pagination">
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <button class="pagination-btn">4</button>
+                    <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SetFindr</h3>
+                <p>The ultimate platform for filmmakers to discover and rent film locations and equipment.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="locations.html">Film Locations</a></li>
+                    <li><a href="gear.html">Film Gear</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Film Street, Hollywood, CA 90028</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@setfindr.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for the latest updates.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SetFindr. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="animations.js"></script>
+</body>
+</html>
